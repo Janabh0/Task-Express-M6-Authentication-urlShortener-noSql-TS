@@ -1,3 +1,6 @@
+import dotenv from "dotenv";
+dotenv.config();
+
 import express from "express";
 import connectDB from "./database";
 import notFound from "./middlewares/NotFound";
@@ -20,5 +23,5 @@ app.use(errorHandler);
 
 connectDB();
 app.listen(PORT, () => {
-    console.log(`Server is running on port ${PORT}`);
+  console.log(`Server is running on port ${PORT}`);
 });
